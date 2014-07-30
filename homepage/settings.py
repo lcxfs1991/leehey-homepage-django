@@ -94,3 +94,4 @@ STATIC_URL = '/static/'
 
 # For loading static files in non-public access folder
 STATICFILES_DIRS = ( os.path.join('static'), )
+
