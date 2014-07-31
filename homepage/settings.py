@@ -95,3 +95,12 @@ STATIC_URL = '/static/'
 # For loading static files in non-public access folder
 STATICFILES_DIRS = ( os.path.join('static'), )
 
+#email setting
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = 'lcxfs1991@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+
