@@ -33,8 +33,14 @@
 
 	 {% block content %}{% endblock %}
 
-	 <div class="footer">
-        <p>© Copyright LeeHey. Let's Explore The World.</p>
+	 <div class="footer row">
+        <div class="col-xs-6">© Copyright LeeHey. Let's Explore The World.</div>
+        <div class="col-xs-6">
+        	<ul class="list-inline pull-right">
+        		<li><a href="https://github.com/lcxfs1991" title="Leehey Github" target="_blank"><img width="50px" src="{% static 'homepage/images/github.png' %}" alt="Leehey Github" class="img-circle"></a></li>
+        		<li><a href="https://www.linkedin.com/in/leeli" title="Leehey Linkedin" target="_blank"><img width="50px" src="{% static 'homepage/images/linkedin.png' %}" alt="Leehey Linkedin" class="img-circle"></a></li>
+        	</ul>
+        </div>
       </div>
 
     </div>

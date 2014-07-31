@@ -9,6 +9,8 @@ class Article(models.Model):
 class Project(models.Model):
 	project_name = models.CharField(max_length=512)
 	project_des = models.TextField()
-	pic_path = models.CharField(max_length=512)
-	pic_file = models.CharField(max_length=512)
+	project_url = models.CharField(max_length=512)
+	pic_path = models.ImageField(upload_to='homepage/static/upload/')
+	# pic_path = models.CharField(max_length=512)
+	# pic_file = models.CharField(max_length=512)
 

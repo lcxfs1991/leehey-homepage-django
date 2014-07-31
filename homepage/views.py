@@ -1,17 +1,28 @@
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 from homepage.models import Article
+from homepage.models import Project
 from homepage.helper.form_helper import ContactForm
 from django.core.mail import send_mail
 
 def index(request):
 	article_list=Article.objects.exclude(main_title='About Me')
 	about_me=Article.objects.filter(main_title='About Me')
+	project_list=Project.objects.all()
 
 	template=loader.get_template('homepage/index.html')
+
+	if (project_list):
+		i = 0
+		for project in project_list:
+    			project_list[i].pic_path.name = project_list[i].pic_path.name.replace('homepage/static/', '')
+    			i += 1
+
+
 	context=RequestContext(request, {
 		'article_list': article_list,
 		'about_me': about_me,
+		'project_list': project_list,
 		'menu': 'home',
 	})
 	return HttpResponse(template.render(context))
