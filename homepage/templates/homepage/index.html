@@ -19,19 +19,37 @@
       </div>
       <hr>
 
-       <div class="row">
-          {% if project_list %}
-            {% for project in project_list %}
-              <div class="col-lg-4">
-                <div class="project_pic">
-                  <a href="{{ project.project_url }}"><img class="profile_pic" width="100%" src="{% static project.pic_path %}" alt="LeeHey Profile Picture" class="img-rounded"></a>
+      <div class="row">
+            {% if project_list1 %}
+              {% for project in project_list1 %}
+                    
+                <div class="col-lg-4">
+                  <div class="project_pic">
+                    <a href="{{ project.project_url }}"><img class="profile_pic" width="100%" src="{% static project.pic_path %}" alt="LeeHey Profile Picture" class="img-rounded"></a>
+                  </div>
+                  <h4>{{project.project_name}}</h4>
+                  <p>{{project.project_des}}</p>
                 </div>
-                <h4>{{project.project_name}}</h4>
-                <p>{{project.project_des}}</p>
-              </div>
-            {% endfor%}
-          {% endif %}
-      </div>
+
+              {% endfor%}
+            {% endif %}
+       </div>
+
+       <div class="row">
+            {% if project_list2 %}
+              {% for project in project_list2 %}
+                    
+                <div class="col-lg-4">
+                  <div class="project_pic">
+                    <a href="{{ project.project_url }}"><img class="profile_pic" width="100%" src="{% static project.pic_path %}" alt="LeeHey Profile Picture" class="img-rounded"></a>
+                  </div>
+                  <h4>{{project.project_name}}</h4>
+                  <p>{{project.project_des}}</p>
+                </div>
+
+              {% endfor%}
+            {% endif %}
+       </div>
 
       <hr>
 
