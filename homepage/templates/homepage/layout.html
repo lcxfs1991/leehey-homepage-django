@@ -16,6 +16,9 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="{% static 'homepage/bootstrap/js/bootstrap.min.js' %}"></script>
 
+	{% load wysiwyg %}
+	{% wysiwyg_setup %}
+
 
 	<title>LeeHey Personal Page</title>
 </head>
@@ -32,6 +35,7 @@
       </div>
 
 	 {% block content %}{% endblock %}
+	 
 
 	 <div class="footer row">
         <div class="col-xs-6">© Copyright LeeHey. Let's Explore The World.</div>

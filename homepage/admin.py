@@ -12,5 +12,9 @@ class ProjectAdmin(admin.ModelAdmin):
     file_path = [ImageInline]
 
 
-admin.site.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+	change_form_template = 'homepage/admin/change_form.html'
+
+
+admin.site.register(Article, ArticleAdmin)
 admin.site.register(Project, ProjectAdmin)

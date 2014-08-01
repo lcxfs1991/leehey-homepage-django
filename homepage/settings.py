@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
+    'django_wysiwyg',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -104,3 +105,7 @@ EMAIL_HOST_USER = 'lcxfs1991@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 
+##ckeditor
+DJANGO_WYSIWYG_FLAVOR = "ckeditor"
+
+DJANGO_WYSIWYG_MEDIA_URL = "/static/ckeditor/"
