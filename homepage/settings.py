@@ -91,7 +91,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/homepage/homepage/static/'
 
 # For loading static files in non-public access folder
 STATICFILES_DIRS = ( os.path.join('static'), )
@@ -108,4 +108,4 @@ EMAIL_PORT = 587
 ##ckeditor
 DJANGO_WYSIWYG_FLAVOR = "ckeditor"
 
-DJANGO_WYSIWYG_MEDIA_URL = "/static/ckeditor/"
+DJANGO_WYSIWYG_MEDIA_URL = STATIC_URL+"ckeditor/"
